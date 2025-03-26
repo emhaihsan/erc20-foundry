@@ -32,15 +32,15 @@ contract OurTokenTest is Test {
     }
 
     // Basic Tests
-    function testBobBalance() public {
+    function testBobBalance() public view {
         assertEq(STARTING_BALANCE, ourToken.balanceOf(bob));
     }
 
-    function testInitialSupply() public {
+    function testInitialSupply() public view {
         assertEq(INITIAL_SUPPLY, ourToken.totalSupply());
     }
 
-    function testTokenNameAndSymbol() public {
+    function testTokenNameAndSymbol() public view {
         assertEq("OurToken", ourToken.name());
         assertEq("OT", ourToken.symbol());
     }
